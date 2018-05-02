@@ -5,13 +5,7 @@
         <title><%= title %></title>
         <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
         <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({
-            tex2jax: {
-              inlineMath: [ ['$','$'] ],
-              processEscapes: true
-            }
-          });
-        </script>
+       </script>
     </head>
     <body>
         <div class="problem-input" id="math-display">$ $</div>
@@ -23,7 +17,15 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script>
-            $(document).ready(function () {
+$( window ).on( "load", function() {
+            //$(document).ready(function () {
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'] ],
+              processEscapes: true
+            }
+          });
+ 
                 // get MathJax output object
                 var mjDisplayBox, mjOutBox;
                 MathJax.Hub.Queue(function () {

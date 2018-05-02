@@ -93,4 +93,4 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-app.listen(process.env.PORT, process.env.IP);
+app.listen(8000);
